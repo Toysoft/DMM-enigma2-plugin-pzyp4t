@@ -22,8 +22,6 @@
 ##
 ################################################################################################################################
 
-from . import _
-
 from Plugins.Plugin import PluginDescriptor
 
 # GUI (Screens)
@@ -362,8 +360,8 @@ class PzyP4T(TimerEditList):
 		        "<": self.open_PzyP4TSetup
 		}
 			
-		self.timerlist = PzyP4TTimerList(self.list)
-		self["timerlist"] = self.timerlist
+		self._timerlist = PzyP4TTimerList(self.list)
+		self["timerlist"] = self._timerlist
 		
 		self.bln_filteredit = False
 		self.bln_woservice_ref = False
@@ -705,7 +703,7 @@ class PzyP4T(TimerEditList):
 
 
 	def firststart(self):
-		self.timerlist.moveToIndex(0)
+		self._timerlist.moveToIndex(0)
 		self.read_cfg()
 			
 		
@@ -748,7 +746,7 @@ class PzyP4T(TimerEditList):
 		
 		
 	def open_TimerLog(self):
-		cur = self.timerlist.getCurrent()
+		cur = self._timerlist.getCurrent()
 		if cur:
 			self.session.openWithCallback(self.__callback_refresh,PzyTimerLog,timer=cur)
 		
@@ -780,7 +778,7 @@ class PzyP4T(TimerEditList):
 		if not pzyP4T_EPGSearchAvailable:
 			return
 		
-		timer = self.timerlist.getCurrent()
+		timer = self._timerlist.getCurrent()
 		if timer:
 			self.session.openWithCallback(
 		                self.__callback_refresh,
@@ -1015,7 +1013,7 @@ class PzyP4T(TimerEditList):
 					#RecordTimerEntry has no '.justremind'
 					timer.justremind = timer.justplay
 					
-				if not timer.disabled and timer.begin > self.timerlist.now:
+				if not timer.disabled and timer.begin > self._timerlist.now:
 					if tpc.case_insensitive:
 						tpcsearchString = tpc.searchString.lower()
 						timer_name_lower = timer.name.lower()
@@ -1070,7 +1068,7 @@ class PzyP4T(TimerEditList):
 					timer.justremind = timer.justplay
 				
 				if timer.justremind and tpc.justremind or timer.justplay and tpc.justplay or (tpc.justremind and tpc.justremind and tpc.justrecord): #Spezialfall für Filter, alle .just* TRUE
-					if timer.disabled and timer.begin > self.timerlist.now:
+					if timer.disabled and timer.begin > self._timerlist.now:
 						if tpc.case_insensitive:
 							tpcsearchString = tpc.searchString.lower()
 							timer_name_lower = timer.name.lower()
@@ -1108,7 +1106,7 @@ class PzyP4T(TimerEditList):
 											except:
 												pass
 
-				if not timer.disabled and timer.begin > self.timerlist.now:
+				if not timer.disabled and timer.begin > self._timerlist.now:
 					lastend=timer.end
 
 
@@ -1126,7 +1124,7 @@ class PzyP4T(TimerEditList):
 					timer.justremind = timer.justplay
 					
 				if not timer.justremind and not tpc.justremind and not timer.justplay and not tpc.justplay or ((not timer.justremind and not timer.justplay) and (tpc.justremind and tpc.justremind and tpc.justrecord)): #Spezialfall, nur im Filter
-					if timer.disabled and timer.begin > self.timerlist.now:
+					if timer.disabled and timer.begin > self._timerlist.now:
 						if not timer.justplay and not timer.justremind:
 							if tpc.case_insensitive:
 								tpcsearchString = tpc.searchString.lower()
@@ -1164,7 +1162,7 @@ class PzyP4T(TimerEditList):
 													self.session.nav.RecordTimer.timeChanged(timer)
 												except:
 													pass
-				if not timer.disabled and timer.begin > self.timerlist.now:
+				if not timer.disabled and timer.begin > self._timerlist.now:
 					lastend=timer.end
 					
 					
@@ -1187,7 +1185,7 @@ class PzyP4T(TimerEditList):
 
 		
 	def arrangeTimerList_RecordingsPrefered(self,prefered=True):
-		self.timerlist.now = int(time())
+		self._timerlist.now = int(time())
 				
 		self.filtertimers_off()
 		if prefered:
@@ -1216,7 +1214,7 @@ class PzyP4T(TimerEditList):
 		for i in range(1,3,1):
 			if timer and timer.disabled:
 				now = int(time())
-				self.timerlist.now = now
+				self._timerlist.now = now
 			
 				timer.enable()
 				timersanitycheck = TimerSanityCheck(self.session.nav.RecordTimer.timer_list, timer)
@@ -1267,7 +1265,7 @@ class PzyP4T(TimerEditList):
 		lst = self.sortedTimers()	
 		
 		now = int(time())
-		self.timerlist.now = now
+		self._timerlist.now = now
 		for t in lst:
 			timer = t[0]
 			if timer.begin > now:
@@ -1580,8 +1578,17 @@ class PzyP4TTimerList(HTMLComponent, GUIComponent, object):
 		self.markPriorityTimers = markPriorityTimers
 		self.now = int(time())
 		self.l.setBuildFunc(self.buildColorTimerEntry)
-		self.l.setList(list)
+		self._list = list
+		self.l.setList(self._list)
 
+	def getList(self):
+		return self._list
+
+	def setList(self, lst):
+		self._list = lst
+		self.l.setList(self._list)
+
+	list = property(getList, setList)
 
 	def getCurrent(self):
 		cur = self.l.getCurrentSelection()
