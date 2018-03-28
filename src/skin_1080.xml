@@ -1,0 +1,124 @@
+<skin>
+	<screen name="PzyP4T" position="center,110" size="1800,930" title="Timer Editor">
+		<eLabel backgroundColor="grey" position="10,80" size="1780,1" />
+		<eLabel backgroundColor="grey" position="1285,80" size="1,840" />
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/red.svg" position="10,5" size="300,70" />
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/green.svg" position="310,5" size="300,70" />
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/yellow.svg" position="610,5" size="300,70" />
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/blue.svg" position="910,5" size="300,70" />
+		<widget backgroundColor="#9f1313" font="Regular;30" halign="center" name="key_red" position="10,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="300,70" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="#1f771f" font="Regular;30" halign="center" name="key_green" position="310,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="300,70" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="#a08500" font="Regular;30" halign="center" name="key_yellow" position="610,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="300,70" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="#18188b" font="Regular;30" halign="center" name="key_blue" position="910,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="300,70" transparent="1" valign="center" zPosition="1" />
+		<widget font="Regular;34" halign="right" position="1650,25" render="Label" size="120,40" source="global.CurrentTime">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget font="Regular;34" halign="right" position="1240,25" render="Label" size="400,40" source="global.CurrentTime">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget source="ServiceEvent" render="Picon" position="1300,90" size="220,132">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget font="Regular;30" foregroundColor="yellow" halign="center" valign="center" position="1550,90" render="Label" size="240,70" source="ServiceEvent">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget font="Regular;28" halign="right" position="1570,180" render="Label" size="90,32" source="Event">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText"></convert>
+		</widget>
+		<widget font="Regular;28" position="1670,180" render="Label" size="110,32" source="Event">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText">Format:- %H:%M</convert>
+		</widget>
+		<widget font="Regular;30" position="1300,230" render="Label" size="480,70" source="Event" valign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget font="Regular;28" foregroundColor="grey" position="1300,310" render="Label" size="480,545" source="Event">
+			<convert type="EventName">FullDescription</convert>
+		</widget>
+		<!-- PzyP4T / Timer+ Original Start
+		<widget disabledicon_pos__with_icons="1200,10;10,10" disabledicon_size="48,48" enableWrapAround="1" eventDescription_pos__with_icons="2000,2000;2000,2000" event_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" event_color="foreground" event_font="Regular;32" event_pos__with_icons="5,3;70,3" event_size="1120,36" finishedicon_pos="10,10" finishedicon_size="48,80" foregroundColorSelected="foreground" itemHeight="115" name="timerlist" orbital_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" orbital_color="#a0a0a0" orbital_font="Regular;28" orbital_pos__with_icons="110,40;170,40" orbital_size="110,32" position="10,100" recicon_pos="10,10" recicon_size="48,48" repeaticon_pos="1210,35" repeaticon_size="35,35" runningicon_pos="10,10" runningicon_size="48,48" scrollbarMode="showOnDemand" service_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" service_color="#a0a0a0" service_font="Regular;28" service_pos__with_icons="225,40;290,40" service_size="890,32" size="1270,805" state_align="RT_HALIGN_RIGHT|RT_VALIGN_CENTER" state_color_dis="red" state_color_fin="green" state_color_rec="red" state_color_run="red" state_color_start="#a0a0a0" state_color_unknown="#a0a0a0" state_color_wait="yellow" state_font="Regular;28" state_pos__with_icons="1070,72;1070,72" state_size="170,30" time_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" time_color="#a0a0a0" time_color_rec="#a0a0a0" time_color_wo_endtime="#a0a0a0" time_font="Regular;28" time_pos__with_icons="5,72;70,72" time_size="990,30" timericon_pos="10,10" timericon_size="48,48" tuner_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" tuner_color="#a0a0a0" tuner_font="Regular;28" tuner_pos__with_icons="5,40;68,40" tuner_size="100,32" zapicon_pos="1210,1" zapicon_size="35,35" />
+		PzyP4T / Timer+ Original Ende -->
+		<widget disabledicon_pos__with_icons="1200,10;10,32" disabledicon_size="48,48" enableWrapAround="1" eventDescription_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" eventDescription_font="Regular;26" eventDescription_pos__with_icons="5,20;70,45" eventDescription_size="800,30" event_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" event_color="foreground" event_font="Regular;32" event_pos__with_icons="5,3;70,3" event_size="1120,36" finishedicon_pos="10,15" finishedicon_size="48,80" itemHeight="115" name="timerlist" orbital_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" orbital_color="#a0a0a0" orbital_font="Regular;18" orbital_pos__with_icons="110,40;5,3" orbital_size="110,32" position="10,100" recicon_pos="10,32" recicon_size="48,48" repeaticon_pos="1160,37" repeaticon_size="35,35" runningicon_pos="10,32" runningicon_size="48,48" scrollbarMode="showOnDemand" service_align="RT_HALIGN_RIGHT|RT_VALIGN_CENTER" service_color="#a0a0a0" service_font="Regular;30" service_pos__with_icons="225,40;745,3" service_size="500,35" size="1270,805" state_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" state_color_dis="red" state_color_fin="green" state_color_rec="red" state_color_run="red" state_color_start="#a0a0a0" state_color_unknown="#a0a0a0" state_color_wait="yellow" state_font="Regular;28" state_pos__with_icons="5,72;70,75" state_size="170,30" time_align="RT_HALIGN_RIGHT|RT_VALIGN_CENTER" time_color="#a0a0a0" time_color_rec="#a0a0a0" time_color_wo_endtime="#a0a0a0" time_font="Regular;28" time_pos__with_icons="400,72;445,75" time_size="800,30" timericon_pos="10,32" timericon_size="48,48" tuner_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" tuner_color="#a0a0a0" tuner_font="Regular;18" tuner_pos__with_icons="5,40;5,80" tuner_size="100,32" zapicon_pos="1210,37" zapicon_size="35,35" eventeit_font="Regular;23" eventeit_pos__with_icons="500,3;550,75" eventeit_size="200,30" eventeit_align="RT_HALIGN_LEFT" eventeit_color="#a0a0a0" />
+		<ePixmap pixmap="Default-FHD/skin_default/icons/menu.svg" position="1600,880" size="80,40" />
+		<ePixmap pixmap="Default-FHD/skin_default/icons/info.svg" position="1700,880" size="80,40" />
+	</screen>
+	<screen name="pzyP4TFilterList" position="center,170" size="1200,820" title=" ">
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/red.svg" position="10,5" size="295,70" />
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/green.svg" position="305,5" size="295,70" />
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/yellow.svg" position="600,5" size="295,70" />
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/blue.svg" position="895,5" size="295,70" />
+		<widget backgroundColor="#9f1313" font="Regular;30" halign="center" name="red" position="10,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="295,70" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="#1f771f" font="Regular;30" halign="center" name="green" position="305,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="295,70" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="#a08500" font="Regular;30" halign="center" name="yellow" position="600,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="295,70" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="#18188b" font="Regular;30" halign="center" name="blue" position="895,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="295,70" transparent="1" valign="center" zPosition="1" />
+		<eLabel backgroundColor="grey" position="10,80" size="1180,1" />
+		<widget color_title_filter_disabled="#00ff6600" enableWrapAround="1" font_0="Regular;28" font_1="Regular;28" foregroundColorSelected="foreground" itemHeight="40" name="list" position="10,90" scrollbarMode="showOnDemand" size="1180,360" width_service="500" />
+		<widget font="Regular;30" name="Priority_Index" position="20,460" size="150,70" />
+		<widget font="Regular;30" name="FilterPriority" position="220,460" size="150,35" />
+		<widget font="Regular;30" name="KeyPressed" position="186,498" size="100,35" />
+		<widget font="Regular;28" itemHeight="40" name="Filter_Details" position="20,570" selectionDisabled="1" size="730,240" />
+		<ePixmap pixmap="Default-FHD/skin_default/icons/menu.svg" position="1020,770" size="80,40" />
+		<eLabel position="1120,775" size="70,40" font="Regular;32" halign="center" text="0..9"/>
+	</screen>
+	<screen name="PzyP4TSetup" position="center,170" size="1200,820" title=" ">
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/red.svg" position="10,5" size="300,70" />
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/green.svg" position="310,5" size="300,70" />
+		<widget backgroundColor="#9f1313" font="Regular;30" halign="center" name="canceltext" position="10,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="300,70" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="#1f771f" font="Regular;30" halign="center" name="oktext" position="310,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="300,70" transparent="1" valign="center" zPosition="1" />
+		<widget font="Regular;34" halign="right" position="1050,25" render="Label" size="120,40" source="global.CurrentTime">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget font="Regular;34" halign="right" position="640,25" render="Label" size="400,40" source="global.CurrentTime">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<eLabel backgroundColor="grey" position="10,80" size="1180,1" />
+		<widget enableWrapAround="1" name="config" position="10,90" scrollbarMode="showOnDemand" size="1180,720" />
+	</screen>
+	<screen name="PzyTimerLog" position="center,170" size="1200,820" title="Timer log">
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/red.svg" position="10,5" size="295,70" />
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/green.svg" position="305,5" size="295,70" />
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/yellow.svg" position="600,5" size="295,70" />
+		<ePixmap pixmap="Default-FHD/skin_default/buttons/blue.svg" position="895,5" size="295,70" />
+		<widget backgroundColor="#9f1313" font="Regular;30" halign="center" name="key_red" position="10,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="295,70" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="#1f771f" font="Regular;30" halign="center" name="key_green" position="305,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="295,70" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="#a08500" font="Regular;30" halign="center" name="key_yellow" position="600,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="295,70" transparent="1" valign="center" zPosition="1" />
+		<widget backgroundColor="#18188b" font="Regular;30" halign="center" name="key_blue" position="895,5" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="295,70" transparent="1" valign="center" zPosition="1" />
+		<eLabel backgroundColor="grey" position="10,80" size="1180,1" />
+		<widget enableWrapAround="1" font="Regular;30" itemHeight="90" name="loglist" position="10,90" scrollbarMode="showOnDemand" size="1180,540" textAlign="RT_VALIGN_TOP|RT_WRAP" textPos="10,10" textSize="1160,70" />
+		<widget font="Regular;34" foregroundColor="yellow" halign="center" position="10,650" render="Label" size="1180,40" source="logentry_date">
+			<convert type="ClockToText">Format:%A  %d.%B. %Y - %H:%M:%S</convert>
+		</widget>
+		<widget font="Regular;30" halign="center" name="logentry" position="10,710" size="1180,100" valign="center" />
+	</screen>
+	<screen id="1" name="PzyP4T_summary" position="0,0" size="132,64">
+		<widget font="Regular;16" halign="center" position="1,2" render="Label" size="130,20" source="parent.ServiceEvent">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<eLabel backgroundColor="white" position="0,23" size="132,1"/>
+		<widget font="Regular;14" halign="center" position="1,26" render="Label" size="130,34" source="parent.Event" valign="center">
+			<convert type="EventName">Name</convert>
+		</widget>
+	</screen>
+	<screen id="3" name="PzyP4T_summary" position="0,0" size="400,240">
+		<ePixmap pixmap="skin_default/display_bg.png" position="0,0" size="400,240" zPosition="-1" />
+		<widget font="Display;50" foregroundColor="#faff00" halign="center" position="10,1" render="Label" size="380,53" source="parent.ServiceEvent" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget font="Display;45" halign="center" position="10,63" render="Label" size="380,95" source="parent.Event" valign="center" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<eLabel backgroundColor="white" position="10,173" size="380,4" />
+		<widget font="Display;55" position="10,186" render="Label" size="150,55" source="global.CurrentTime" transparent="1">
+			<convert type="ClockToText">Default</convert>
+		</widget>
+		<widget font="Display;55" halign="right" position="165,186" render="Label" size="230,55" source="parent.Event" transparent="1">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">inMinutes</convert>
+		</widget>
+		<widget font="Display;55" halign="center" position="180,186" render="FixedLabel" size="215,55" source="session.RecordState" text="REC" transparent="1">
+			<convert type="ConfigEntryTest">config.usage.blinking_display_clock_during_recording,True,CheckSourceBoolean</convert>
+			<convert type="ConditionalShowHide">Blink</convert>
+		</widget>
+	</screen>
+</skin>

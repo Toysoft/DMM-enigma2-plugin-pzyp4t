@@ -6,4 +6,5 @@ install_PYTHON = \
 
 install_DATA = \
 	pzyP4T.png \
+	skin_1080.xml \
 	skin.xml
