@@ -1,48 +1,47 @@
 <skin>
 	<!-- pzyP4T -->
-
 	<!-- #################################################################################### -->
-	<!-- #		 									# -->
-	<!-- # Useable Icon-Paths For Your Own Pics:						# -->
-	<!-- #											# -->
-	<!-- # "skin_default/icons/timerlist_running.png"					# -->
-	<!-- # "skin_default/icons/timerlist_finished.png"					# -->
-	<!-- # "skin_default/icons/timerlist_waiting.png"					# -->
-	<!-- # "skin_default/icons/timerlist_waiting_long.png"					# -->
-	<!-- # "skin_default/icons/timerlist_disabled.png"					# -->
-	<!-- # "skin_default/icons/timerlist_repeat.png"					# -->
-	<!-- # "skin_default/icons/timerlist_instant_rec.png"					# -->
-	<!-- # "skin_default/icons/timerlist_zap.png"						# -->
-	<!-- #		 									# -->
+	<!-- #		 																			# -->
+	<!-- # Useable Icon-Paths For Your Own Pics:											# -->
+	<!-- #																					# -->
+	<!-- # "skin_default/icons/timerlist_running.png"										# -->
+	<!-- # "skin_default/icons/timerlist_finished.png"										# -->
+	<!-- # "skin_default/icons/timerlist_waiting.png"										# -->
+	<!-- # "skin_default/icons/timerlist_waiting_long.png"									# -->
+	<!-- # "skin_default/icons/timerlist_disabled.png"										# -->
+	<!-- # "skin_default/icons/timerlist_repeat.png"										# -->
+	<!-- # "skin_default/icons/timerlist_instant_rec.png"									# -->
+	<!-- # "skin_default/icons/timerlist_zap.png"											# -->
+	<!-- #		 																			# -->
 	<!-- #################################################################################### -->
-	<!-- #											# -->
-	<!-- # Useable Alignments In Widget "timerlist":					# -->
-	<!-- #											# -->
-	<!-- # RT_HALIGN_LEFT									# -->
-	<!-- # RT_HALIGN_RIGHT									# -->
-	<!-- # RT_HALIGN_CENTER									# -->
-	<!-- # RT_HALIGN_BLOCK 									# -->
-	<!-- #		 									# -->
-	<!-- # RT_VALIGN_TOP 									# -->
-	<!-- # RT_VALIGN_CENTER 								# -->
-	<!-- # RT_VALIGN_BOTTOM 								# -->
-	<!-- #		 									# -->
-	<!-- # RT_WRAP	 									# -->
-	<!-- #											# -->
+	<!-- #																					# -->
+	<!-- # Useable Alignments In Widget "timerlist":										# -->
+	<!-- #																					# -->
+	<!-- # RT_HALIGN_LEFT																	# -->
+	<!-- # RT_HALIGN_RIGHT																	# -->
+	<!-- # RT_HALIGN_CENTER																	# -->
+	<!-- # RT_HALIGN_BLOCK 																	# -->
+	<!-- #		 																			# -->
+	<!-- # RT_VALIGN_TOP 																	# -->
+	<!-- # RT_VALIGN_CENTER 																# -->
+	<!-- # RT_VALIGN_BOTTOM 																# -->
+	<!-- #		 																			# -->
+	<!-- # RT_WRAP	 																		# -->
+	<!-- #																					# -->
 	<!-- #################################################################################### -->
-	<!-- #		 									# -->
-	<!-- # Text-Positions And Position Of "disabledicon"					# -->
-	<!-- # "pos_without_icons_x,pos_without_icons_y;pos_with_icons_x,pos_with_icons_y" 	# -->
-	<!-- #		 									# -->
+	<!-- #		 																			# -->
+	<!-- # Text-Positions And Position Of "disabledicon"									# -->
+	<!-- # "pos_without_icons_x,pos_without_icons_y;pos_with_icons_x,pos_with_icons_y"	 	# -->
+	<!-- #		 																			# -->
 	<!-- #################################################################################### -->
-	<!-- #		 									# -->
-	<!-- # Timer-Editor 									# -->
-	<!-- #		 									# -->
-	<!-- # Adapt Your TimerEditList-Skin 							# -->
-	<!-- #		 									# -->
+	<!-- #		 																			# -->
+	<!-- # Timer-Editor 																	# -->
+	<!-- #		 																			# -->
+	<!-- # Adapt Your TimerEditList-Skin 													# -->
+	<!-- #		 																			# -->
 	<!-- #################################################################################### -->
-	<!-- #		 									# -->
-	<screen name="PzyP4T" position="0,0" size="1280,720" title="Timer Editor" flags="wfNoBorder" >
+	<!-- #		 																			# -->
+	<screen name="PzyP4T" position="0,0" size="1280,720" title="Timer Editor" flags="wfNoBorder">
 		<eLabel position="  0,  0" size="1280,720" zPosition="-15" backgroundColor="#00000000" />
 		<eLabel position=" 45,100" size=" 735,515" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="785,295" size=" 445,320" zPosition="-10" backgroundColor="#00111118" />
@@ -51,57 +50,38 @@
 		<eLabel position="785,230" size=" 135, 60" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="925,100" size=" 305,190" zPosition="-10" backgroundColor="#00111118" />
 		<widget source="session.VideoPicture" render="Pig" position="935,115" zPosition="3" size="284,160" backgroundColor="#ff000000" />
-		<widget source="ServiceEvent" render="Picon" position="805,100" size="100,60" zPosition="2" transparent="1" alphatest="blend" >
+		<widget source="ServiceEvent" render="Picon" position="805,100" size="100,60" zPosition="2" transparent="1" alphatest="blend">
 			<convert type="ServiceName">Reference</convert>
 		</widget>
-		<widget source="Event" render="Label" position="795,295" size="435,24" font="Regular; 20" backgroundColor="#00111118" foregroundColor="#00ffc800" transparent="1" >
+		<widget source="Event" render="Label" position="795,295" size="435,24" font="Regular; 20" backgroundColor="#00111118" foregroundColor="#00ffc800" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
-		<widget source="Event" render="Label" position="785,165" size="135,60" font="Regular;26" foregroundColor="#0000c8ff" backgroundColor="#00111118" transparent="1" valign="center" halign="center" >
+		<widget source="Event" render="Label" position="785,165" size="135,60" font="Regular;26" foregroundColor="#0000c8ff" backgroundColor="#00111118" transparent="1" valign="center" halign="center">
 			<convert type="EventTime">StartTime</convert>
 			<convert type="ClockToText"></convert>
 		</widget>
-		<widget source="Event" render="Label" position="785,230" size="135,60" font="Regular;26" foregroundColor="#0000c8ff" backgroundColor="#00111118" transparent="1" valign="center" halign="center" >
+		<widget source="Event" render="Label" position="785,230" size="135,60" font="Regular;26" foregroundColor="#0000c8ff" backgroundColor="#00111118" transparent="1" valign="center" halign="center">
 			<convert type="EventTime">EndTime</convert>
 			<convert type="ClockToText">Format:%H:%M</convert>
 		</widget>
-		<widget source="Event" render="Label" position="795,320" size="430,40" font="Regular; 18" foregroundColor="#00ffff66" backgroundColor="#00111118" transparent="1" valign="top" >
+		<widget source="Event" render="Label" position="795,320" size="430,40" font="Regular; 18" foregroundColor="#00ffff66" backgroundColor="#00111118" transparent="1" valign="top">
 			<convert type="EventName">Description</convert>
 		</widget>
-		<widget source="Event" render="Label" position="795,365" size="430,245" font="Regular; 18" foregroundColor="#00ffffff" backgroundColor="#00111118" transparent="1" valign="top" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=5000,wrap" >
+		<widget source="Event" render="Label" position="795,365" size="430,245" font="Regular; 18" foregroundColor="#00ffffff" backgroundColor="#00111118" transparent="1" valign="top" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=5000,wrap">
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
-		<widget source="global.CurrentTime" render="Label" position="1020,40" size="200,50" font="Regular;50" halign="right" foregroundColor="#0000c8ff" backgroundColor="#00000000" transparent="1" >
+		<widget source="global.CurrentTime" render="Label" position="1020,40" size="200,50" font="Regular;50" halign="right" foregroundColor="#0000c8ff" backgroundColor="#00000000" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<eLabel text="Timer Editor" position="70,47" size="950,43" font="Regular;35" foregroundColor="#00ffffff" backgroundColor="#00111118" transparent="1" />
-		<widget name="timerlist" position="60,115" size="710,490" itemHeight="70"  backgroundColor="#00111118" backgroundColorSelected="#002f2f2f" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1"    
-				service_font="Regular;18"          service_pos__with_icons=" 40, 3; 40, 3"          service_size="560,20"          service_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER"           service_color="#0033ff33"          service_color_selected="#0033ff33"
-				  event_font="Regular;20"            event_pos__with_icons=" 40,19; 40,19"            event_size="560,30"            event_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER"             event_color="#00ffc800"            event_color_selected="#00ffc800"  
-	   eventDescription_font="Regular;16" eventDescription_pos__with_icons="200, 4;200, 4" eventDescription_size="470,20" eventDescription_align="RT_HALIGN_RIGHT|RT_VALIGN_CENTER" eventDescription_color="#00ffff66" eventDescription_color_selected="#00ffff66"
-				   time_font="Regular;18"             time_pos__with_icons=" 40,47; 40,47"             time_size="460,20"             time_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER"              time_color="#0000c8ff"             time_color_selected="#0000c8ff" time_color_wo_endtime="#000066ff" time_color_wo_endtime_selected="#000066ff" time_color_rec="#00ff3300" time_color_rec_selected="#00ff3300"
-                  tuner_font="Regular;10"            tuner_pos__with_icons="  0, 3;  0, 3"            tuner_size=" 40,20"            tuner_align="RT_HALIGN_CENTER|RT_VALIGN_CENTER"           tuner_color="#00ffff66"            tuner_color_selected="#00ffff66"				  
-                orbital_font="Regular;10"          orbital_pos__with_icons="  0,24;  0,47"          orbital_size=" 40,20"          orbital_align="RT_HALIGN_CENTER|RT_VALIGN_CENTER"         orbital_color="#00ffff66"          orbital_color_selected="#00ffff66"				  				  
-				  state_font="Regular;18"            state_pos__with_icons="520,47;520,47"            state_size="150,20"            state_align="RT_HALIGN_RIGHT|RT_VALIGN_CENTER" 
-				state_color_unknown="#00ffff00"   state_color_unknown_selected="#00ffff00"
-				  state_color_start="#0000c8ff"     state_color_start_selected="#0000c8ff"
-				    state_color_dis="#00ff3300"       state_color_dis_selected="#00ff3300" disabledicon_pos__with_icons="520,15;0,12"  disabledicon_size="40,40"
-				   state_color_wait="#0033ff33"      state_color_wait_selected="#0033ff33"                timericon_pos=" 10,25"          timericon_size="40,40"
-		      state_color_wait_long="#0033ff33" state_color_wait_long_selected="#0033ff33"
-					state_color_run="#00ffc800"       state_color_run_selected="#00ffc800"              runningicon_pos=" 10,25"        runningicon_size="40,40"
-				    state_color_rec="#00ffc800"       state_color_rec_selected="#00ffc800"                  recicon_pos="  3,25"            recicon_size="40,40"
-				    state_color_fin="#00ff3300"       state_color_fin_selected="#00ff3300"             finishedicon_pos=" 10,20"       finishedicon_size="40,40"
-				                                                                                         repeaticon_pos="595,27"         repeaticon_size="40,40"
-				                                                                                            zapicon_pos="645,27"            zapicon_size="40,40"  
-		>
-		</widget>
-		<widget name="key_red"    position=" 55,635" size="210,35" zPosition="1" font="Regular;20" valign="top" halign="left" foregroundColor="#00ff3300" backgroundColor="#00111118" transparent="1" />
-		<widget name="key_green"  position="275,635" size="210,35" zPosition="1" font="Regular;20" valign="top" halign="left" foregroundColor="#0033ff33" backgroundColor="#00111118" transparent="1" />
+		<widget name="timerlist" position="60,115" size="710,490" itemHeight="70" backgroundColor="#00111118" backgroundColorSelected="#002f2f2f" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" service_font="Regular;18" service_pos__with_icons=" 40, 3; 40, 3" service_size="560,20" service_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" service_color="#0033ff33" service_color_selected="#0033ff33" event_font="Regular;20" event_pos__with_icons=" 40,19; 40,19" event_size="560,30" event_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" event_color="#00ffc800" event_color_selected="#00ffc800" eventDescription_font="Regular;16" eventDescription_pos__with_icons="200, 4;200, 4" eventDescription_size="470,20" eventDescription_align="RT_HALIGN_RIGHT|RT_VALIGN_CENTER" eventDescription_color="#00ffff66" eventDescription_color_selected="#00ffff66" time_font="Regular;18" time_pos__with_icons=" 40,47; 40,47" time_size="460,20" time_align="RT_HALIGN_LEFT|RT_VALIGN_CENTER" time_color="#0000c8ff" time_color_selected="#0000c8ff" time_color_wo_endtime="#000066ff" time_color_wo_endtime_selected="#000066ff" time_color_rec="#00ff3300" time_color_rec_selected="#00ff3300" tuner_font="Regular;10" tuner_pos__with_icons="  0, 3;  0, 3" tuner_size=" 40,20" tuner_align="RT_HALIGN_CENTER|RT_VALIGN_CENTER" tuner_color="#00ffff66" tuner_color_selected="#00ffff66" orbital_font="Regular;10" orbital_pos__with_icons="  0,24;  0,47" orbital_size=" 40,20" orbital_align="RT_HALIGN_CENTER|RT_VALIGN_CENTER" orbital_color="#00ffff66" orbital_color_selected="#00ffff66" state_font="Regular;18" state_pos__with_icons="520,47;520,47" state_size="150,20" state_align="RT_HALIGN_RIGHT|RT_VALIGN_CENTER" state_color_unknown="#00ffff00" state_color_unknown_selected="#00ffff00" state_color_start="#0000c8ff" state_color_start_selected="#0000c8ff" state_color_dis="#00ff3300" state_color_dis_selected="#00ff3300" disabledicon_pos__with_icons="520,15;0,12" disabledicon_size="40,40" state_color_wait="#0033ff33" state_color_wait_selected="#0033ff33" timericon_pos=" 10,25" timericon_size="40,40" state_color_wait_long="#0033ff33" state_color_wait_long_selected="#0033ff33" state_color_run="#00ffc800" state_color_run_selected="#00ffc800" runningicon_pos=" 10,25" runningicon_size="40,40" state_color_rec="#00ffc800" state_color_rec_selected="#00ffc800" recicon_pos="  3,25" recicon_size="40,40" state_color_fin="#00ff3300" state_color_fin_selected="#00ff3300" finishedicon_pos=" 10,20" finishedicon_size="40,40" repeaticon_pos="595,27" repeaticon_size="40,40" zapicon_pos="645,27" zapicon_size="40,40"></widget>
+		<widget name="key_red" position=" 55,635" size="210,35" zPosition="1" font="Regular;20" valign="top" halign="left" foregroundColor="#00ff3300" backgroundColor="#00111118" transparent="1" />
+		<widget name="key_green" position="275,635" size="210,35" zPosition="1" font="Regular;20" valign="top" halign="left" foregroundColor="#0033ff33" backgroundColor="#00111118" transparent="1" />
 		<widget name="key_yellow" position="495,635" size="210,35" zPosition="1" font="Regular;20" valign="top" halign="left" foregroundColor="#00ffff00" backgroundColor="#00111118" transparent="1" />
-		<widget name="key_blue"   position="715,635" size="210,35" zPosition="1" font="Regular;20" valign="top" halign="left" foregroundColor="#000066ff" backgroundColor="#00111118" transparent="1" />
+		<widget name="key_blue" position="715,635" size="210,35" zPosition="1" font="Regular;20" valign="top" halign="left" foregroundColor="#000066ff" backgroundColor="#00111118" transparent="1" />
 		<eLabel position=" 930,635" size=" 60, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="Menu" />
-		<eLabel position=" 990,635" size=" 50, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="EPG"  />
-		<eLabel position="1040,635" size=" 50, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="OK"   />
+		<eLabel position=" 990,635" size=" 50, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="EPG" />
+		<eLabel position="1040,635" size=" 50, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="OK" />
 		<eLabel position="1090,635" size=" 50, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="Text" />
 		<eLabel position="1140,635" size=" 15, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="&lt;" />
 		<eLabel position="1155,635" size=" 15, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="&gt;" />
@@ -112,39 +92,37 @@
 		<eLabel position=" 485,670" size=" 215, 5" zPosition="-10" backgroundColor="#00ffff00" />
 		<eLabel position=" 705,670" size=" 215, 5" zPosition="-10" backgroundColor="#000066ff" />
 		<eLabel position=" 925,670" size=" 305, 5" zPosition="-10" backgroundColor="#00ffffff" />
-		<eLabel position=" 45, 620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />	
+		<eLabel position=" 45, 620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
 		<eLabel position=" 265,620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
 		<eLabel position=" 485,620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
 		<eLabel position=" 705,620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
 	</screen>
-
-
-	<!-- #################################### -->	
-	<!-- # 					# -->	
-	<!-- # Filter-Editor			# -->	
-	<!-- # 					# -->	
-	<!-- # Adapt Your PluginBrowser-Skin	# -->
-	<!-- # 					# -->	
 	<!-- #################################### -->
-	<!-- # 					# -->
-	<screen name="pzyP4TFilterList" position="0,0" size="1280,720" backgroundColor="#00000000" title="pzyP4TFilterList" flags="wfNoBorder" >
-		<widget source="session.VideoPicture" render="Pig"   position="935,115" size="284,160" zPosition="3" backgroundColor="#ff000000" />
-		<widget source="global.CurrentTime"   render="Label" position="1020,40" size="200, 50" zPosition="3" backgroundColor="#00111118" foregroundColor="#0000c8ff" font="Regular;50" halign="right" transparent="1" >
+	<!-- # 									# -->
+	<!-- # Filter-Editor					# -->
+	<!-- # 									# -->
+	<!-- # Adapt Your PluginBrowser-Skin	# -->
+	<!-- # 									# -->
+	<!-- #################################### -->
+	<!-- # 									# -->
+	<screen name="pzyP4TFilterList" position="0,0" size="1280,720" backgroundColor="#00000000" title="pzyP4TFilterList" flags="wfNoBorder">
+		<widget source="session.VideoPicture" render="Pig" position="935,115" size="284,160" zPosition="3" backgroundColor="#ff000000" />
+		<widget source="global.CurrentTime" render="Label" position="1020,40" size="200, 50" zPosition="3" backgroundColor="#00111118" foregroundColor="#0000c8ff" font="Regular;50" halign="right" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget source="Title" render="Label" position="70,47" size="950,43" font="Regular;35" foregroundColor="#00ffffff" backgroundColor="#00000000" transparent="1" />
-		<widget name="list"   position=" 55,105" size="860,500" zPosition="4" backgroundColor="#00111118" backgroundColorSelected="#002f2f2f" font_0="Regular;22" font_1="Regular;22" itemHeight="28" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" color_title_filter_disabled="#00ff6600" width_service="150" />
-		<widget name="red"    position=" 55,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#00ff3300" font="Regular;20" valign="top" halign="left" transparent="1" /> 	
-		<widget name="green"  position="275,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#0033ff33" font="Regular;20" valign="top" halign="left" transparent="1" />	
-		<widget name="yellow" position="495,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#00ffff00" font="Regular;20" valign="top" halign="left" transparent="1" />	
-		<widget name="blue"   position="715,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#000066ff" font="Regular;20" valign="top" halign="left" transparent="1" />	
+		<widget name="list" position=" 55,105" size="860,500" zPosition="4" backgroundColor="#00111118" backgroundColorSelected="#002f2f2f" font_0="Regular;22" font_1="Regular;22" itemHeight="28" scrollbarMode="showOnDemand" transparent="1" enableWrapAround="1" color_title_filter_disabled="#00ff6600" width_service="150" />
+		<widget name="red" position=" 55,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#00ff3300" font="Regular;20" valign="top" halign="left" transparent="1" />
+		<widget name="green" position="275,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#0033ff33" font="Regular;20" valign="top" halign="left" transparent="1" />
+		<widget name="yellow" position="495,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#00ffff00" font="Regular;20" valign="top" halign="left" transparent="1" />
+		<widget name="blue" position="715,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#000066ff" font="Regular;20" valign="top" halign="left" transparent="1" />
 		<eLabel position="   0,  0" size="1280,720" zPosition="-15" backgroundColor="#00000000" />
 		<eLabel position="  45,100" size=" 875,515" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position=" 925,295" size=" 305,320" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position=" 925,100" size=" 305,190" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position=" 930,635" size="  60, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="Menu" />
-		<eLabel position=" 990,635" size="  50, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="EPG"  />
-		<eLabel position="1040,635" size="  50, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="OK"   />
+		<eLabel position=" 990,635" size="  50, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="EPG" />
+		<eLabel position="1040,635" size="  50, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="OK" />
 		<eLabel position="1090,635" size="  15, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="&lt;" />
 		<eLabel position="1105,635" size="  15, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="&gt;" />
 		<eLabel position="1120,637" size="  50, 35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="0..9" />
@@ -154,77 +132,64 @@
 		<eLabel position=" 485,670" size=" 215,  5" zPosition="-10" backgroundColor="#00ffff00" />
 		<eLabel position=" 705,670" size=" 215,  5" zPosition="-10" backgroundColor="#000066ff" />
 		<eLabel position=" 925,670" size=" 305,  5" zPosition="-10" backgroundColor="#00ffffff" />
-		<eLabel position=" 45, 620" size=" 215, 50" zPosition="-15" backgroundColor="#00111118" />	
+		<eLabel position=" 45, 620" size=" 215, 50" zPosition="-15" backgroundColor="#00111118" />
 		<eLabel position=" 265,620" size=" 215, 50" zPosition="-15" backgroundColor="#00111118" />
 		<eLabel position=" 485,620" size=" 215, 50" zPosition="-15" backgroundColor="#00111118" />
 		<eLabel position=" 705,620" size=" 215, 50" zPosition="-15" backgroundColor="#00111118" />
-		<widget name="Priority_Index" position=" 940,320" size=" 200, 50" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffc800" font="Regular;25" valign="top" halign="left"  transparent="1" />
-		<widget name="FilterPriority" position="1140,320" size="  50, 50" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffc800" font="Regular;25" valign="top" halign="right" transparent="1" />	
+		<widget name="Priority_Index" position=" 940,320" size=" 200, 50" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffc800" font="Regular;25" valign="top" halign="left" transparent="1" />
+		<widget name="FilterPriority" position="1140,320" size="  50, 50" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffc800" font="Regular;25" valign="top" halign="right" transparent="1" />
 		<widget name="Filter_Details" position=" 940,400" size=" 290,225" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" backgroundColorSelected="#00111118" foregroundColorSelected="#00ffffff" itemHeight="28" font="Regular;16" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
-		<widget name="KeyPressed"     position="1140,350" size="  50, 50" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffc800" font="Regular;25" valign="top" halign="right" transparent="1" />	
+		<widget name="KeyPressed" position="1140,350" size="  50, 50" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffc800" font="Regular;25" valign="top" halign="right" transparent="1" />
 	</screen>
-
-
 	<!-- #################################### -->
-	<!-- # 					# -->	
-	<!-- # Skinable ChoiceBox		# -->
-	<!-- # 					# -->	
-	<!-- # Adapt Your ChoiceBox-Skin	# -->
-	<!-- # 					# -->
+	<!-- # 									# -->
+	<!-- # Skinable ChoiceBox				# -->
+	<!-- # 									# -->
+	<!-- # Adapt Your ChoiceBox-Skin		# -->
+	<!-- # 									# -->
 	<!-- #################################### -->
-	<!-- # 					# -->
-	<screen name="ChoiceBoxPlus" position="0,0" size="1280,720" flags="wfNoBorder" >
+	<!-- # 									# -->
+	<screen name="ChoiceBoxPlus" position="0,0" size="1280,720" flags="wfNoBorder">
 		<eLabel position="  0,  0" size="1280,720" zPosition="-15" backgroundColor="#00000000" />
 		<eLabel position=" 45,100" size=" 735,515" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="785,295" size=" 445,320" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="785,100" size=" 135,190" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="925,100" size=" 305,190" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position=" 45,620" size="1185, 55" zPosition="-10" backgroundColor="#00111118" />
-		<widget source="session.VideoPicture" render="Pig"   position="935,115" size="284,160" zPosition="3" backgroundColor="#ff000000" />
-		<widget source="global.CurrentTime"   render="Label" position="1020,40" size="200, 50" zPosition="3" backgroundColor="#00111118" foregroundColor="#0000c8ff" font="Regular;50" halign="right" transparent="1" >
+		<widget source="session.VideoPicture" render="Pig" position="935,115" size="284,160" zPosition="3" backgroundColor="#ff000000" />
+		<widget source="global.CurrentTime" render="Label" position="1020,40" size="200, 50" zPosition="3" backgroundColor="#00111118" foregroundColor="#0000c8ff" font="Regular;50" halign="right" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
 		<widget name="text" position="70, 47" size="950,43" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;35" transparent="1" />
-		<widget name="list" position="60,115" size="710,490" itemHeight="23" font="Regular;20" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"
-				backgroundColor="#00111118" foregroundColor="#00ffffff"	backgroundColorSelected="#002f2f2f"
-				iconsize="40,28" iconpos="5,0" textpos="60,center"
-		>
-		</widget>
+		<widget name="list" position="60,115" size="710,490" itemHeight="23" font="Regular;20" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" backgroundColor="#00111118" foregroundColor="#00ffffff" backgroundColorSelected="#002f2f2f" iconsize="40,28" iconpos="5,0" textpos="60,center"></widget>
 	</screen>
-	
-
 	<!-- #################################### -->
-	<!-- # 					# -->
-	<!-- # ChoiceBoxPlus_LCD		# -->
-	<!-- # 					# -->
+	<!-- # 									# -->
+	<!-- # ChoiceBoxPlus_LCD				# -->
+	<!-- # 									# -->
 	<!-- #################################### -->
 	<screen name="ChoiceBoxPlus_summary" position="0,0" size="132,64">
 		<widget font="Regular;13" position="2,0" render="Label" size="128,64" source="parent.summary_list" />
-	</screen>	
-	
-	
+	</screen>
 	<!-- #################################### -->
-	<!-- # 					# -->
-	<!-- # PzyP4TSetup			# -->
-	<!-- # 					# -->
-	<!-- #################################### -->	
-	<screen name="PzyP4TSetup" position="0,0" size="1280,720" flags="wfNoBorder" title="" >
+	<!-- # 									# -->
+	<!-- # PzyP4TSetup						# -->
+	<!-- # 									# -->
+	<!-- #################################### -->
+	<screen name="PzyP4TSetup" position="0,0" size="1280,720" flags="wfNoBorder" title="">
 		<eLabel position=" 70, 47" size=" 950, 43" font="Regular;35" foregroundColor="#00ffffff" backgroundColor="#00000000" noWrap="1" text="Settings-Editor" transparent="1" valign="center"/>
 		<eLabel position="  0,  0" size="1280,720" zPosition="-15" backgroundColor="#00000000" />
 		<eLabel position=" 45,100" size=" 735,515" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="785,295" size=" 445,320" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="785,100" size=" 135,190" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="925,100" size=" 305,190" zPosition="-10" backgroundColor="#00111118" />
-		<widget source="session.VideoPicture" render="Pig"   position="935,115" size="284,160" zPosition="3" backgroundColor="#ff000000" />
-		<widget source="global.CurrentTime"   render="Label" position="1020,40" size="200, 50" zPosition="3" backgroundColor="#00111118" foregroundColor="#0000c8ff" font="Regular;50" halign="right" transparent="1" >
+		<widget source="session.VideoPicture" render="Pig" position="935,115" size="284,160" zPosition="3" backgroundColor="#ff000000" />
+		<widget source="global.CurrentTime" render="Label" position="1020,40" size="200, 50" zPosition="3" backgroundColor="#00111118" foregroundColor="#0000c8ff" font="Regular;50" halign="right" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget name="config" position="60,115" size="710,490" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1"
-				backgroundColor="#00111118" foregroundColor="#00ffffff"	backgroundColorSelected="#002f2f2f"
-		>
-		</widget>
-		<widget name="canceltext" position=" 55,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#00ff3300" font="Regular;20" valign="top" halign="left" transparent="1" /> 	
-		<widget name="oktext"     position="275,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#0033ff33" font="Regular;20" valign="top" halign="left" transparent="1" />	
+		<widget name="config" position="60,115" size="710,490" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" backgroundColor="#00111118" foregroundColor="#00ffffff" backgroundColorSelected="#002f2f2f"></widget>
+		<widget name="canceltext" position=" 55,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#00ff3300" font="Regular;20" valign="top" halign="left" transparent="1" />
+		<widget name="oktext" position="275,635" size="215, 35" zPosition="2" backgroundColor="#00111118" foregroundColor="#0033ff33" font="Regular;20" valign="top" halign="left" transparent="1" />
 		<eLabel position=" 930,635" size="  60,35" zPosition="  2" backgroundColor="#00111118" foregroundColor="#00ffffff" font="Regular;20" valign="top" halign="center" transparent="1" text="Text" />
 		<eLabel position=" 925,620" size=" 305,50" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="  45,670" size=" 215, 5" zPosition="-10" backgroundColor="#00ff3300" />
@@ -232,19 +197,17 @@
 		<eLabel position=" 485,670" size=" 215, 5" zPosition="-10" backgroundColor="#00ffff00" />
 		<eLabel position=" 705,670" size=" 215, 5" zPosition="-10" backgroundColor="#000066ff" />
 		<eLabel position=" 925,670" size=" 305, 5" zPosition="-10" backgroundColor="#00ffffff" />
-		<eLabel position=" 45, 620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />	
+		<eLabel position=" 45, 620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
 		<eLabel position=" 265,620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
 		<eLabel position=" 485,620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
-		<eLabel position=" 705,620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />		
+		<eLabel position=" 705,620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
 	</screen>
-
-	
 	<!-- #################################### -->
-	<!-- # 					# -->
-	<!-- # Timer Log			# -->
-	<!-- # 					# -->
-	<!-- #################################### -->	
-	<screen name="PzyTimerLog" position="0,0" size="1280,720" flags="wfNoBorder" >
+	<!-- # 									# -->
+	<!-- # Timer Log						# -->
+	<!-- # 									# -->
+	<!-- #################################### -->
+	<screen name="PzyTimerLog" position="0,0" size="1280,720" flags="wfNoBorder">
 		<eLabel text="Timer log" position="70,47" size="950,43" font="Regular;35" foregroundColor="#00ffffff" backgroundColor="#00111118" transparent="1" />
 		<eLabel position="  0,  0" size="1280,720" zPosition="-15" backgroundColor="#00000000" />
 		<eLabel position=" 45,100" size=" 735,515" zPosition="-10" backgroundColor="#00111118" />
@@ -253,34 +216,34 @@
 		<eLabel position="785,165" size=" 135, 60" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="785,230" size=" 135, 60" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="925,100" size=" 305,190" zPosition="-10" backgroundColor="#00111118" />
-		<widget source="session.VideoPicture" render="Pig"   position="935,115" size="284,160" zPosition="3" backgroundColor="#ff000000" />
-		<widget source="global.CurrentTime"   render="Label" position="1020,40" size="200, 50" zPosition="3" backgroundColor="#00111118" foregroundColor="#0000c8ff" font="Regular;50" halign="right" transparent="1" >
+		<widget source="session.VideoPicture" render="Pig" position="935,115" size="284,160" zPosition="3" backgroundColor="#ff000000" />
+		<widget source="global.CurrentTime" render="Label" position="1020,40" size="200, 50" zPosition="3" backgroundColor="#00111118" foregroundColor="#0000c8ff" font="Regular;50" halign="right" transparent="1">
 			<convert type="ClockToText">Default</convert>
 		</widget>
-		<widget name="loglist"    position=" 60,115" size="710,490" itemHeight="75"       font="Regular;23" textPos="10,10" textSize="690,55" textAlign="RT_HALIGN_LEFT|RT_VALIGN_TOP|RT_WRAP" scrollbarMode="showOnDemand" transparent="1"/>
-		<widget name="logentry"   position="800,310" size="400,300" zPosition="1"         font="Regular;23" foregroundColor="#00ffc800" backgroundColor="#00111118" transparent="1" />
-		<widget source="logentry_date" render="Label" position="785,100" size="135,60"    font="Regular;22" foregroundColor="#0000c8ff" backgroundColor="#00111118" transparent="1" valign="center" halign="center" >
+		<widget name="loglist" position=" 60,115" size="710,490" itemHeight="75" font="Regular;23" textPos="10,10" textSize="690,55" textAlign="RT_HALIGN_LEFT|RT_VALIGN_TOP|RT_WRAP" scrollbarMode="showOnDemand" transparent="1"/>
+		<widget name="logentry" position="800,310" size="400,300" zPosition="1" font="Regular;23" foregroundColor="#00ffc800" backgroundColor="#00111118" transparent="1" />
+		<widget source="logentry_date" render="Label" position="785,100" size="135,60" font="Regular;22" foregroundColor="#0000c8ff" backgroundColor="#00111118" transparent="1" valign="center" halign="center">
 			<convert type="ClockToText">Format:%A</convert>
 		</widget>
-		<widget source="logentry_date"    render="Label" position="785,165" size="135,60" font="Regular;22" foregroundColor="#0000c8ff" backgroundColor="#00111118" transparent="1" valign="center" halign="center" >
+		<widget source="logentry_date" render="Label" position="785,165" size="135,60" font="Regular;22" foregroundColor="#0000c8ff" backgroundColor="#00111118" transparent="1" valign="center" halign="center">
 			<convert type="ClockToText">Format:%d.%m.%Y</convert>
 		</widget>
-		<widget source="logentry_date"    render="Label" position="785,230" size="135,60" font="Regular;26" foregroundColor="#0000c8ff" backgroundColor="#00111118" transparent="1" valign="center" halign="center" >
+		<widget source="logentry_date" render="Label" position="785,230" size="135,60" font="Regular;26" foregroundColor="#0000c8ff" backgroundColor="#00111118" transparent="1" valign="center" halign="center">
 			<convert type="ClockToText">Format:%H:%M:%S</convert>
 		</widget>
-		<widget name="key_red"    position=" 55,635" size="210, 35" zPosition="1"         font="Regular;20" foregroundColor="#00ff3300" backgroundColor="#00111118" transparent="1" valign="top"    halign="left"  />
-		<widget name="key_green"  position="275,635" size="210, 35" zPosition="1"         font="Regular;20" foregroundColor="#0033ff33" backgroundColor="#00111118" transparent="1" valign="top"    halign="left"  />
-		<widget name="key_yellow" position="495,635" size="210, 35" zPosition="1"         font="Regular;20" foregroundColor="#00ffff00" backgroundColor="#00111118" transparent="1" valign="top"    halign="left" />
-		<widget name="key_blue"   position="715,635" size="210, 35" zPosition="1"         font="Regular;20" foregroundColor="#000066ff" backgroundColor="#00111118" transparent="1" valign="top"    halign="left" />		
+		<widget name="key_red" position=" 55,635" size="210, 35" zPosition="1" font="Regular;20" foregroundColor="#00ff3300" backgroundColor="#00111118" transparent="1" valign="top" halign="left" />
+		<widget name="key_green" position="275,635" size="210, 35" zPosition="1" font="Regular;20" foregroundColor="#0033ff33" backgroundColor="#00111118" transparent="1" valign="top" halign="left" />
+		<widget name="key_yellow" position="495,635" size="210, 35" zPosition="1" font="Regular;20" foregroundColor="#00ffff00" backgroundColor="#00111118" transparent="1" valign="top" halign="left" />
+		<widget name="key_blue" position="715,635" size="210, 35" zPosition="1" font="Regular;20" foregroundColor="#000066ff" backgroundColor="#00111118" transparent="1" valign="top" halign="left" />
 		<eLabel position=" 925,620" size=" 305,50" zPosition="-10" backgroundColor="#00111118" />
 		<eLabel position="  45,670" size=" 215, 5" zPosition="-10" backgroundColor="#00ff3300" />
 		<eLabel position=" 265,670" size=" 215, 5" zPosition="-10" backgroundColor="#0033ff33" />
 		<eLabel position=" 485,670" size=" 215, 5" zPosition="-10" backgroundColor="#00ffff00" />
 		<eLabel position=" 705,670" size=" 215, 5" zPosition="-10" backgroundColor="#000066ff" />
 		<eLabel position=" 925,670" size=" 305, 5" zPosition="-10" backgroundColor="#00ffffff" />
-		<eLabel position=" 45, 620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />	
+		<eLabel position=" 45, 620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
 		<eLabel position=" 265,620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
 		<eLabel position=" 485,620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
-		<eLabel position=" 705,620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />		
-	</screen>	
+		<eLabel position=" 705,620" size=" 215,50" zPosition="-15" backgroundColor="#00111118" />
+	</screen>
 </skin>
