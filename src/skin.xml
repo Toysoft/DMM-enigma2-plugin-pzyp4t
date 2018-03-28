@@ -68,7 +68,7 @@
 		<widget source="Event" render="Label" position="795,320" size="430,40" font="Regular; 18" foregroundColor="#00ffff66" backgroundColor="#00111118" transparent="1" valign="top" >
 			<convert type="EventName">Description</convert>
 		</widget>
-		<widget source="Event" render="RunningText" position="795,365" size="430,245" font="Regular; 18" foregroundColor="#00ffffff" backgroundColor="#00111118" transparent="1" valign="top" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=5000,wrap" >
+		<widget source="Event" render="Label" position="795,365" size="430,245" font="Regular; 18" foregroundColor="#00ffffff" backgroundColor="#00111118" transparent="1" valign="top" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,always=0,startdelay=5000,wrap" >
 			<convert type="EventName">ExtendedDescription</convert>
 		</widget>
 		<widget source="global.CurrentTime" render="Label" position="1020,40" size="200,50" font="Regular;50" halign="right" foregroundColor="#0000c8ff" backgroundColor="#00000000" transparent="1" >

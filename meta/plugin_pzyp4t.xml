@@ -1,0 +1,16 @@
+<default>
+	<prerequisites>
+		<tag type="Recording" />
+		<tag type="EPG" />
+	</prerequisites>
+	<info>
+		<author>pzy-co</author>
+		<name>Timer+</name>
+		<packagename>enigma2-plugin-extensions-pzyp4t</packagename>
+		<shortdescription>Priorities for Timers aka Timer+ - by pzy-co</shortdescription>
+		<description>Extended timerlist with EPG-Lookups and more</description>
+	</info>
+	<files type="package"> <!-- without version, without .deb  -->
+		<file type="package" name="enigma2-plugin-extensions-pzyp4t" />
+	</files>
+</default>

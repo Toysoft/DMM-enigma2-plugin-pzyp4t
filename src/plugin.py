@@ -1,6 +1,5 @@
 # -*- coding: UTF-8 -*-
 
-
 ################################################################################################################################
 ##
 ##    Enigma2 -- pzyP4T -- by pzy-co  (GNU GPL3)
@@ -100,7 +99,7 @@ except ImportError:
 ###################################################################################################################################
 
 
-PZYP4T_VERSION="pzyP4T v0.3.3"
+PZYP4T_VERSION="pzyP4T v0.4.0"
 PZYP4T_CONFIG_VERSION="v0.2"
 PZYP4T_XML_CONFIG = "/etc/enigma2/pzyP4T.xml"
 PZYP4T_PLUGIN_PATH = "/usr/lib/enigma2/python/Plugins/Extensions/pzyP4T/"
