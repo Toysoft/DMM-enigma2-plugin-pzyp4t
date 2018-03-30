@@ -1,4 +1,4 @@
-AC_INIT([enigma2-plugin-extensions-pzyp4t],[0.4.0], [reichi@opendreambox.org])
+AC_INIT([enigma2-plugin-extensions-pzyp4t],[0.4.1], [reichi@opendreambox.org])
 AM_INIT_AUTOMAKE([foreign])
 
 AM_PATH_PYTHON
