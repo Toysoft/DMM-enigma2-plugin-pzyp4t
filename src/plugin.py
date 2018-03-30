@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 
+
 ################################################################################################################################
 ##
 ##    Enigma2 -- pzyP4T -- by pzy-co  (GNU GPL3)
@@ -99,7 +100,7 @@ except ImportError:
 ###################################################################################################################################
 
 
-PZYP4T_VERSION="pzyP4T v0.4.0"
+PZYP4T_VERSION="pzyP4T v0.4.1"
 PZYP4T_CONFIG_VERSION="v0.2"
 PZYP4T_XML_CONFIG = "/etc/enigma2/pzyP4T.xml"
 PZYP4T_PLUGIN_PATH = "/usr/lib/enigma2/python/Plugins/Extensions/pzyP4T/"
@@ -2101,8 +2102,8 @@ class PzyP4TTimerList(HTMLComponent, GUIComponent, object):
 		res.append((eListboxPythonMultiContent.TYPE_TEXT, x_evD, y_evD, self.width_eventDesc, height_evD, 4, self.eventDesc_align, timerdesc, color_eventDesc,color_eventDesc_sel))
 
 		tun, opos = self.tp_info(timer.service_ref)
-		res.append((eListboxPythonMultiContent.TYPE_TEXT, x_tun, y_tun, self.width_tuner, self.height_tuner, 5, self.tuner_align, tun, color_tuner, color_tuner_sel))
-		res.append((eListboxPythonMultiContent.TYPE_TEXT, x_orb, y_orb, self.width_orbital, self.height_orbital, 6, self.orbital_align, opos, color_orbital, color_orbital_sel))
+		#res.append((eListboxPythonMultiContent.TYPE_TEXT, x_tun, y_tun, self.width_tuner, self.height_tuner, 5, self.tuner_align, tun, color_tuner, color_tuner_sel))
+		#res.append((eListboxPythonMultiContent.TYPE_TEXT, x_orb, y_orb, self.width_orbital, self.height_orbital, 6, self.orbital_align, opos, color_orbital, color_orbital_sel))
 		
 		repeatedtext = ""
 		days = ( _("Mon"), _("Tue"), _("Wed"), _("Thu"), _("Fri"), _("Sat"), _("Sun") )
@@ -2225,6 +2226,12 @@ class PzyP4TTimerList(HTMLComponent, GUIComponent, object):
 		if pzyP4TsettingsComponent.showEventEit:
 			res.append((eListboxPythonMultiContent.TYPE_TEXT, x_eit, y_eit, self.width_eventeit, self.height_eventeit, 7, self.eventeit_align, eit,color_eventeit,color_eventeit_sel))
 		
+		if pzyP4TsettingsComponent.showTuner:
+			res.append((eListboxPythonMultiContent.TYPE_TEXT, x_tun, y_tun, self.width_tuner, self.height_tuner, 5, self.tuner_align, tun, color_tuner, color_tuner_sel))
+		
+		if pzyP4TsettingsComponent.showOrbital:
+			res.append((eListboxPythonMultiContent.TYPE_TEXT, x_orb, y_orb, self.width_orbital, self.height_orbital, 6, self.orbital_align, opos, color_orbital, color_orbital_sel))
+		
 		if pzyP4TsettingsComponent.showIcons:
 			if timer.state == TimerEntry.StateRunning:
 				if (timer.dontSave or bln_recicon): 
@@ -2308,6 +2315,8 @@ class pzyP4TSettings:
 		
 		self.showIcons = True
 		self.showEventEit = False
+		self.showTuner = False
+		self.showOrbital = False
 		self.showEventDesc = False
 
 
@@ -2352,6 +2361,8 @@ class pzyP4TSettings:
 	               color_title_filter_disabled, \
 	               showIcons, \
 	               showEventEit, \
+	               showTuner, \
+	               showOrbital, \
 	               showEventDesc \
 	               ):
 
@@ -2402,6 +2413,8 @@ class pzyP4TSettings:
 		
 		self.showIcons = showIcons
 		self.showEventEit = showEventEit
+		self.showTuner = showTuner
+		self.showOrbital = showOrbital
 		self.showEventDesc = showEventDesc
 		
 		
@@ -2450,6 +2463,8 @@ class pzyP4TSettings:
 
 		s.showIcons = bool(self.showIcons)
 		s.showEventEit = bool(self.showEventEit)
+		s.showTuner = bool(self.showTuner)
+		s.showOrbital = bool(self.showOrbital)
 		s.showEventDesc = bool(self.showEventDesc)
 		
 		if clone_fcl:
@@ -3412,6 +3427,8 @@ class PzyP4TSetup(Screen, ConfigListScreen):
 		
 		self.showIcons = NoSave(ConfigSelection(default=str(s.showIcons), choices=[("True","yes"), ("False","no")]))
 		self.showEventEit = NoSave(ConfigSelection(default=str(s.showEventEit), choices=[("True","yes"), ("False","no")]))
+		self.showTuner = NoSave(ConfigSelection(default=str(s.showTuner), choices=[("True","yes"), ("False","no")]))
+		self.showOrbital = NoSave(ConfigSelection(default=str(s.showOrbital), choices=[("True","yes"), ("False","no")]))
 		self.use_skin_colors = NoSave(ConfigSelection(default=str(s.use_skin_colors), choices=[("True","yes"), ("False","no")]))
 		self.showEventDesc = NoSave(ConfigSelection(default=str(s.showEventDesc), choices=[("True","yes"), ("False","no")]))
 		
@@ -3537,6 +3554,8 @@ class PzyP4TSetup(Screen, ConfigListScreen):
 		
 		list.append(getConfigListEntry(_("Show Icons") + ":", self.showIcons))
 		list.append(getConfigListEntry(_("Show EventEit") + ":", self.showEventEit))
+		list.append(getConfigListEntry(_("Show Tuner") + ":", self.showTuner))
+		list.append(getConfigListEntry(_("Show Orbital") + ":", self.showOrbital))
 		list.append(getConfigListEntry(_("Use Skin-Colors") + ":", self.use_skin_colors))
 		list.append(getConfigListEntry(_("Show Extended Eventname") + ":", self.showEventDesc))
 		#list.append(getConfigListEntry(_("Unique 'ForegroundSelected'") + ":", self.use_uniForegroundSelected))
@@ -3635,6 +3654,8 @@ class PzyP4TSetup(Screen, ConfigListScreen):
 		
 		s.showIcons = eval(self.showIcons.value)
 		s.showEventEit = eval(self.showEventEit.value)
+		s.showTuner = eval(self.showTuner.value)
+		s.showOrbital = eval(self.showOrbital.value)
 		
 		s.showEventDesc = eval(self.showEventDesc.value)
 		
@@ -3976,6 +3997,8 @@ def parseConfig(configuration, list, version = None, uniqueTimerId = 0, defaultT
 	el = configuration.find("settings")
 	s.showIcons = bool(int(el.get("showIcons", s.showIcons)))
 	s.showEventEit = bool(int(el.get("showEventEit", s.showEventEit)))
+	s.showTuner = bool(int(el.get("showTuner", s.showTuner)))
+	s.showOrbital = bool(int(el.get("showOrbital", s.showOrbital)))
 	s.use_skin_colors = bool(int(el.get("use_skin_colors", s.use_skin_colors)))
 	
 	s.showEventDesc = bool(int(el.get("showEventDesc", s.showEventDesc)))
@@ -4034,6 +4057,8 @@ def buildConfig(list):
 	append('<settings \n')
 	append('\t showIcons="%s" \n' %str(int(s.showIcons)) )
 	append('\t showEventEit="%s" \n' %str(int(s.showEventEit)) )
+	append('\t showTuner="%s" \n' %str(int(s.showTuner)) )
+	append('\t showOrbital="%s" \n' %str(int(s.showOrbital)) )
 	append('\t use_skin_colors="%s" \n' %str(int(s.use_skin_colors)) )
 	append('\t showEventDesc="%s"> \n' %str(int(s.showEventDesc)) )
 	#append('\t use_uniForegroundSelected="%s"> \n' %str(int(s.use_uniForegroundSelected)) )
